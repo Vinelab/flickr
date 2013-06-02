@@ -4,10 +4,10 @@ use HttpClient;
 
 Class Agent {
 
-	function __construct(\Illuminate\Config\Repository $config)
+	function __construct(\Illuminate\Config\Repository $config, \Vinelab\Http\Client $httpClient)
 	{
 		$this->config = $config;
-		var_dump($this->config);
+		$this->httpClient = $httpClient;
 	}
 
 	/**
@@ -18,7 +18,7 @@ Class Agent {
 
 	public function fetch($url)
 	{
-		$response = HttpClient::get($this->request($url));
+		$response = $this->httpClient->get($this->request($url));
 		return Feed::collection(@unserialize($response->content()));
 	}
 

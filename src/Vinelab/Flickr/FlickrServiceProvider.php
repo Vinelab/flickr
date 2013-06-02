@@ -29,7 +29,7 @@ class FlickrServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->app['flickr'] = $this->app->share(function($app){
-			return new Agent($this->app['config']);
+			return new Agent($this->app['config'], $this->app['httpClient']);
 		});
 
 		$this->app->booting(function() {
