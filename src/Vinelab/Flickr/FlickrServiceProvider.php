@@ -28,7 +28,15 @@ class FlickrServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app['flickr'] = $this->app->share(function($app){
+			return new Agent($this->app['config']);
+		});
+
+		$this->app->booting(function() {
+
+			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+			$loader->alias('Flickr', 'Vinelab\Flickr\Facades\Agent');
+		});
 	}
 
 	/**
