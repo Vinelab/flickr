@@ -1,6 +1,6 @@
 {
     "name": "vinelab/flickr",
-    "description": "",
+    "description": "Utility package that fetches and parses Flickr Feeds and Photosets based on URL",
     "license": "MIT",
     "authors": [
         {
