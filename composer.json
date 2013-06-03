@@ -1,6 +1,7 @@
 {
     "name": "vinelab/flickr",
     "description": "",
+    "license": "MIT",
     "authors": [
         {
             "name": "Abed Halawi",
