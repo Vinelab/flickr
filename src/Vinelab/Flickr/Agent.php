@@ -17,7 +17,21 @@ Class Agent {
 	public function fetch($url)
 	{
 		$response = $this->httpClient->get($this->request($url));
-		return Feed::collection(@unserialize($response->content()));
+
+		if ($response)
+		{
+			return $this->feed($response->content());
+		}
+
+	}
+
+	public function feed($content)
+	{
+		if ($content)
+		{
+			$content = unserialize($content);
+			return isset($content['photoset']) ? new Photoset($content['photoset']) : new Feed($content);
+		}
 	}
 
 	/**
@@ -47,7 +61,7 @@ Class Agent {
 
 			$params = array(
 				'api_key'     => $this->config->get('flickr::settings.api_key'),
-				'method'      => $this->config->get('flickr::settings.sets_method'),
+				'method'      => $this->config->get('flickr::settings.photoset_photos_method'),
 				'photoset_id' => $photosetId,
 				'extras'      => 'url_sq,url_t,url_s,url_m,url_o',
 				'format'	  => 'php_serial'
