@@ -1,7 +1,5 @@
 <?php namespace Vinelab\Flickr;
 
-use HttpClient;
-
 Class Agent {
 
 	function __construct(\Illuminate\Config\Repository $config, \Vinelab\Http\Client $httpClient)
