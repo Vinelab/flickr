@@ -1,7 +1,7 @@
-<?php namespace Vinelab\Flickr\Tests;
+<?php namespace Vinelab\Social\Flickr\Tests;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use Vinelab\Flickr\Feed;
+use Vinelab\Social\Flickr\Feed;
 
 Class FeedTest extends TestCase {
 
@@ -17,7 +17,7 @@ Class FeedTest extends TestCase {
 		$this->assertNotNull($feed->id, 'Must have an id');
 		$this->assertNotNull($feed->photos, 'Must have an id');
 
-		$this->assertInstanceOf('\Vinelab\Flickr\Photo', $feed->photos[0]);
+		$this->assertInstanceOf('\Vinelab\Social\Flickr\Photo', $feed->photos[0]);
 
 		$feedArray = $feed->toArray();
 		$this->assertArrayHasKey('title', $feed->toArray());

@@ -1,8 +1,8 @@
-<?php namespace Vinelab\Flickr\Tests;
+<?php namespace Vinelab\Social\Flickr\Tests;
 
 use PHPUnit_Framework_TestCase as TestCase;
 use Mockery as M;
-use Vinelab\Flickr\Agent;
+use Vinelab\Social\Flickr\Agent;
 
 Class AgentTest extends TestCase {
 
@@ -28,7 +28,7 @@ Class AgentTest extends TestCase {
 
 		$feed = $flickr->fetch($url);
 		$this->assertNotNull($feed);
-		$this->assertInstanceOf('\Vinelab\Flickr\Feed', $feed, 'Should return a Feed instance');
+		$this->assertInstanceOf('\Vinelab\Social\Flickr\Feed', $feed, 'Should return a Feed instance');
 	}
 
 	public function testFetchPhotoset()
@@ -44,6 +44,6 @@ Class AgentTest extends TestCase {
 
 		$feed = $flickr->fetch($url);
 		$this->assertNotNull($feed);
-		$this->assertInstanceOf('\Vinelab\Flickr\Photoset', $feed, 'Should return a photoset instance');
+		$this->assertInstanceOf('\Vinelab\Social\Flickr\Photoset', $feed, 'Should return a photoset instance');
 	}
 }

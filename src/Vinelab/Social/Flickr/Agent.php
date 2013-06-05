@@ -1,4 +1,4 @@
-<?php namespace Vinelab\Flickr;
+<?php namespace Vinelab\Social\Flickr;
 
 Class Agent {
 

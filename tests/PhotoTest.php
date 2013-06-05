@@ -1,7 +1,7 @@
-<?php namespace Vinelab\Flickr\Tests;
+<?php namespace Vinelab\Social\Flickr\Tests;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use Vinelab\Flickr\Photo;
+use Vinelab\Social\Flickr\Photo;
 
 Class PhotoTest extends TestCase {
 
@@ -19,7 +19,7 @@ Class PhotoTest extends TestCase {
 	{
 		$photo = new Photo(unserialize(Helpers::mockResult($photoType)));
 
-		$this->assertInstanceOf('\Vinelab\Flickr\Photo', $photo);
+		$this->assertInstanceOf('\Vinelab\Social\Flickr\Photo', $photo);
 		$this->assertNotNull($photo->id, 'Must have an id');
 		$this->assertNotNull($photo->title, 'Must have a title');
 		$this->assertNotNull($photo->url, 'Must have a url');
