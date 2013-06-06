@@ -1,4 +1,4 @@
-<?php namespace Vinelab\Social\Flickr\Facades;
+<?php namespace Vinelab\Services\Flickr\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

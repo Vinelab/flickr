@@ -1,4 +1,4 @@
-<?php namespace Vinelab\Social\Flickr\Tests;
+<?php namespace Vinelab\Services\Flickr\Tests;
 
 Class Helpers {
 

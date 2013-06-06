@@ -1,4 +1,4 @@
-<?php namespace Vinelab\Social\Flickr;
+<?php namespace Vinelab\Services\Flickr;
 
 Class Feed {
 

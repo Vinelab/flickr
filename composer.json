@@ -22,7 +22,7 @@
     "autoload": {
 
         "psr-0": {
-            "Vinelab\\Social\\Flickr": "src/"
+            "Vinelab\\Services\\Flickr": "src/"
         }
     },
     "minimum-stability": "dev"
