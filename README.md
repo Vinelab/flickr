@@ -5,9 +5,9 @@
 ## Installation
 Refer to [vinelab/flickr on packagist.org](https://packagist.org/packages/vinelab/flickr) for composer installation instructions.
 
-Edit **app.php** and add ```'Vinelab\Flickr\FlickrServiceProvider',``` to the ```'providers'``` array.
+Edit **app.php** and add ```'Vinelab\Services\Flickr\FlickrServiceProvider',``` to the ```'providers'``` array.
 
-It will automatically alias itself as **Flickr** so no need to alias it in your **app.php** unless you would like to customize it. In that case edit your **'aliases'** in **app.php** adding ``` 'MyFlickr'	  => 'Vinelab\Flickr\Facades\Flickr',```
+It will automatically alias itself as **Flickr** so no need to alias it in your **app.php** unless you would like to customize it. In that case edit your **'aliases'** in **app.php** adding ``` 'MyFlickr'	  => 'Vinelab\Services\Flickr\Facades\Flickr',```
 
 ## Usage
 
