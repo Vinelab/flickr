@@ -1,8 +1,8 @@
-<?php namespace Vinelab\Services\Flickr;
+<?php namespace Vinelab\Flickr;
 
 Class Agent {
 
-	function __construct(\Illuminate\Config\Repository $config, \Vinelab\Services\Http\Client $httpClient)
+	function __construct(\Illuminate\Config\Repository $config, \Vinelab\Http\Client $httpClient)
 	{
 		$this->config = $config;
 		$this->httpClient = $httpClient;

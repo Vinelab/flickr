@@ -1,8 +1,8 @@
-<?php namespace Vinelab\Services\Flickr\Tests;
+<?php namespace Vinelab\Flickr\Tests;
 
 use PHPUnit_Framework_TestCase as TestCase;
 use Mockery as M;
-use Vinelab\Services\Flickr\Agent;
+use Vinelab\Flickr\Agent;
 
 Class AgentTest extends TestCase {
 
@@ -11,8 +11,8 @@ Class AgentTest extends TestCase {
 		$this->configMock       = M::mock('Illuminate\Config\Repository');
 		$this->configMock->shouldReceive('get');
 
-		$this->httpClientMock   = M::mock('Vinelab\Services\Http\Client');
-		$this->httpResponseMock = M::mock('Vinelab\Services\Http\Response');
+		$this->httpClientMock   = M::mock('Vinelab\Http\Client');
+		$this->httpResponseMock = M::mock('Vinelab\Http\Response');
 	}
 
 	public function testFetchFeed()
@@ -28,7 +28,7 @@ Class AgentTest extends TestCase {
 
 		$feed = $flickr->fetch($url);
 		$this->assertNotNull($feed);
-		$this->assertInstanceOf('\Vinelab\Services\Flickr\Feed', $feed, 'Should return a Feed instance');
+		$this->assertInstanceOf('\Vinelab\Flickr\Feed', $feed, 'Should return a Feed instance');
 	}
 
 	public function testFetchPhotoset()
@@ -44,6 +44,6 @@ Class AgentTest extends TestCase {
 
 		$feed = $flickr->fetch($url);
 		$this->assertNotNull($feed);
-		$this->assertInstanceOf('\Vinelab\Services\Flickr\Photoset', $feed, 'Should return a photoset instance');
+		$this->assertInstanceOf('\Vinelab\Flickr\Photoset', $feed, 'Should return a photoset instance');
 	}
 }

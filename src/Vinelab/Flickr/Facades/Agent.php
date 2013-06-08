@@ -1,4 +1,4 @@
-<?php namespace Vinelab\Services\Flickr\Facades;
+<?php namespace Vinelab\Flickr\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -9,6 +9,6 @@ Class Agent extends Facade {
 	 *
 	 * @return string
 	 */
-	protected static function getFacadeAccessor() { return 'social_flickr'; }
+	protected static function getFacadeAccessor() { return 'vinelab.flickr'; }
 
 }

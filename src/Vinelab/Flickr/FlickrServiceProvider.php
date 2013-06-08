@@ -1,4 +1,4 @@
-<?php namespace Vinelab\Services\Flickr;
+<?php namespace Vinelab\Flickr;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -28,14 +28,14 @@ class FlickrServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['social_flickr'] = $this->app->share(function($app){
-			return new Agent($this->app['config'], $this->app['httpClient']);
+		$this->app['vinelab.flickr'] = $this->app->share(function($app){
+			return new Agent($this->app['config'], $this->app['vinelab.httpclient']);
 		});
 
 		$this->app->booting(function() {
 
 			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			$loader->alias('Flickr', 'Vinelab\Services\Flickr\Facades\Agent');
+			$loader->alias('Flickr', 'Vinelab\Flickr\Facades\Agent');
 		});
 	}
 

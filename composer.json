@@ -11,7 +11,7 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.0.x",
-        "vinelab/http": "dev-master"
+        "vinelab/http": "*"
     },
 
     "require-dev": {
@@ -22,7 +22,7 @@
     "autoload": {
 
         "psr-0": {
-            "Vinelab\\Services\\Flickr": "src/"
+            "Vinelab\\Flickr": "src/"
         }
     },
     "minimum-stability": "dev"

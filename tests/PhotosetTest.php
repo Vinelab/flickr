@@ -1,7 +1,7 @@
-<?php namespace Vinelab\Services\Flickr\Tests;
+<?php namespace Vinelab\Flickr\Tests;
 
 use PHPUnit_Framework_TestCase as TestCase;
-use Vinelab\Services\Flickr\Photoset;
+use Vinelab\Flickr\Photoset;
 
 Class PhotosetTest extends TestCase {
 
