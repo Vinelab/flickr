@@ -1,6 +1,8 @@
+## Vinelab  - Flickr Agent
+
 ![build status](https://travis-ci.org/Vinelab/flickr.png?branch=master "build status")
 
-## Vinelab  - Flickr Agent
+![Codeship build status](https://www.codeship.io/projects/0462bb50-c97e-0131-eedd-762fd394af47/status)
 
 ## Installation
 Refer to [vinelab/flickr on packagist.org](https://packagist.org/packages/vinelab/flickr) for composer installation instructions.
